@@ -1,0 +1,26 @@
+<app-landing-header></app-landing-header>
+
+<!-- Our Services Section -->
+  <section id="services" class="our-services">
+    <div class="container">
+      <h2>{{ 'services.ourServices.title' | transloco }}</h2>
+      <p class="section-intro">{{ 'services.ourServices.description' | transloco }}</p>
+
+      <div class="services-grid">
+        <div class="service-card" *ngFor="let serviceIndex of [0,1,2,3,4,5]">
+          <div class="service-icon">
+            {{ ['💰','🏥','📊','🔄','🎓','🔍'][serviceIndex] }}
+          </div>
+          <h3>{{ 'services.ourServices.services.' + serviceIndex + '.title' | transloco }}</h3>
+          <p>{{ 'services.ourServices.services.' + serviceIndex + '.description' | transloco }}</p>
+          <ul class="service-features">
+            <li *ngFor="let feature of ('services.ourServices.services.' + serviceIndex + '.features' | transloco)">
+              {{ feature }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-landing-footer></app-landing-footer>

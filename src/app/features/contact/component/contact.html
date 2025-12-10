@@ -1,0 +1,363 @@
+<div class="contact-page">
+  
+  <app-landing-header></app-landing-header>
+
+  <section class="contact-hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <h1>
+          {{ 'contact.hero.title' | transloco }}
+          <img src="klixx.png" alt="KLIXA" class="company-logo">
+        </h1>
+
+        <p class="hero-description">{{ 'contact.hero.description' | transloco }}</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-icon">⏰</div>
+            <h3>{{ 'contact.hero.responseTime' | transloco }}</h3>
+            <p>{{ 'contact.hero.responseDetail' | transloco }}</p>
+          </div>
+          <div class="stat">
+            <div class="stat-icon">🌍</div>
+            <h3>{{ 'contact.hero.coverage' | transloco }}</h3>
+            <p>{{ 'contact.hero.coverageDetail' | transloco }}</p>
+          </div>
+          <div class="stat">
+            <div class="stat-icon">💬</div>
+            <h3>{{ 'contact.hero.support' | transloco }}</h3>
+            <p>{{ 'contact.hero.supportDetail' | transloco }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Methods Section -->
+  <section class="contact-methods">
+    <div class="container">
+      <h2>{{ 'contact.methods.title' | transloco }}</h2>
+      <p class="section-intro">{{ 'contact.methods.description' | transloco }}</p>
+
+      <div class="methods-grid">
+        <div class="method-card">
+          <div class="method-icon">📞</div>
+          <h3>{{ 'contact.methods.phone.title' | transloco }}</h3>
+          <p>{{ 'contact.methods.phone.description' | transloco }}</p>
+          <div class="contact-info">
+            <div class="info-item">
+              <span class="info-label">{{ 'contact.methods.phone.sales' | transloco }}</span>
+              <a href="tel:+201029970031" class="info-value">+20 102 997 0031</a>
+            </div>
+            <div class="info-item">
+              <span class="info-label">{{ 'contact.methods.phone.support' | transloco }}</span>
+              <a href="tel:+201029970032" class="info-value">+20 102 997 0032</a>
+            </div>
+            <div class="info-item">
+              <span class="info-label">{{ 'contact.methods.phone.emergency' | transloco }}</span>
+              <a href="tel:+201029970033" class="info-value">+20 102 997 0033</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="method-icon">✉️</div>
+          <h3>{{ 'contact.methods.email.title' | transloco }}</h3>
+          <p>{{ 'contact.methods.email.description' | transloco }}</p>
+          <div class="contact-info">
+            <div class="info-item">
+              <span class="info-label">{{ 'contact.methods.email.general' | transloco }}</span>
+              <a href="mailto:info@klixa.com" class="info-value">info@klixa.com</a>
+            </div>
+            <div class="info-item">
+              <span class="info-label">{{ 'contact.methods.email.sales' | transloco }}</span>
+              <a href="mailto:sales@klixa.com" class="info-value">sales@klixa.com</a>
+            </div>
+            <div class="info-item">
+              <span class="info-label">{{ 'contact.methods.email.support' | transloco }}</span>
+              <a href="mailto:support@klixa.com" class="info-value">support@klixa.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="method-icon">💻</div>
+          <h3>{{ 'contact.methods.liveChat.title' | transloco }}</h3>
+          <p>{{ 'contact.methods.liveChat.description' | transloco }}</p>
+          <button class="btn btn-primary" (click)="startLiveChat()">
+            {{ 'contact.methods.liveChat.button' | transloco }}
+          </button>
+          <div class="availability">
+            <span class="status-dot online"></span>
+            {{ 'contact.methods.liveChat.availability' | transloco }}
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="method-icon">🕒</div>
+          <h3>{{ 'contact.methods.office.title' | transloco }}</h3>
+          <p>{{ 'contact.methods.office.description' | transloco }}</p>
+          <div class="contact-info">
+            <div class="info-item">
+              <span class="info-label">{{ 'contact.methods.office.hours' | transloco }}</span>
+              <span class="info-value">8:00 AM - 6:00 PM (GMT+2)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">{{ 'contact.methods.office.days' | transloco }}</span>
+              <span class="info-value">{{ 'contact.methods.office.daysDetail' | transloco }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact-form" class="contact-form-section">
+    <div class="container">
+      <div class="form-container">
+        <div class="form-header">
+          <h2>{{ 'contact.form.title' | transloco }}</h2>
+          <p>{{ 'contact.form.description' | transloco }}</p>
+        </div>
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">{{ 'contact.form.firstName' | transloco }}</label>
+              <input type="text" id="firstName" formControlName="firstName" 
+                     [class.error]="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched">
+              <div class="error-message" *ngIf="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched">
+                {{ 'contact.form.errors.required' | transloco }}
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">{{ 'contact.form.lastName' | transloco }}</label>
+              <input type="text" id="lastName" formControlName="lastName"
+                     [class.error]="contactForm.get('lastName')?.invalid && contactForm.get('lastName')?.touched">
+              <div class="error-message" *ngIf="contactForm.get('lastName')?.invalid && contactForm.get('lastName')?.touched">
+                {{ 'contact.form.errors.required' | transloco }}
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">{{ 'contact.form.email' | transloco }}</label>
+              <input type="email" id="email" formControlName="email"
+                     [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+              <div class="error-message" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                <span *ngIf="contactForm.get('email')?.errors?.['required']">{{ 'contact.form.errors.required' | transloco }}</span>
+                <span *ngIf="contactForm.get('email')?.errors?.['email']">{{ 'contact.form.errors.email' | transloco }}</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">{{ 'contact.form.phone' | transloco }}</label>
+              <input type="tel" id="phone" formControlName="phone"
+                     [class.error]="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
+              <div class="error-message" *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
+                {{ 'contact.form.errors.required' | transloco }}
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company">{{ 'contact.form.company' | transloco }}</label>
+            <input type="text" id="company" formControlName="company">
+          </div>
+
+          <div class="form-group">
+            <label for="inquiryType">{{ 'contact.form.inquiryType' | transloco }}</label>
+            <select id="inquiryType" formControlName="inquiryType">
+              <option value="">{{ 'contact.form.selectOption' | transloco }}</option>
+              <option value="sales">{{ 'contact.form.inquiryTypes.sales' | transloco }}</option>
+              <option value="support">{{ 'contact.form.inquiryTypes.support' | transloco }}</option>
+              <option value="partnership">{{ 'contact.form.inquiryTypes.partnership' | transloco }}</option>
+              <option value="career">{{ 'contact.form.inquiryTypes.career' | transloco }}</option>
+              <option value="other">{{ 'contact.form.inquiryTypes.other' | transloco }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">{{ 'contact.form.message' | transloco }}</label>
+            <textarea id="message" formControlName="message" rows="5"
+                      [class.error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"></textarea>
+            <div class="error-message" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+              {{ 'contact.form.errors.required' | transloco }}
+            </div>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="newsletter" formControlName="newsletter">
+            <label for="newsletter">{{ 'contact.form.newsletter' | transloco }}</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn" 
+                  [disabled]="contactForm.invalid || isSubmitting">
+            <span *ngIf="!isSubmitting">{{ 'contact.form.submit' | transloco }}</span>
+            <span *ngIf="isSubmitting">{{ 'contact.form.submitting' | transloco }}</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="form-sidebar">
+        <div class="sidebar-card">
+          <h3>{{ 'contact.sidebar.emergency.title' | transloco }}</h3>
+          <p>{{ 'contact.sidebar.emergency.description' | transloco }}</p>
+          <a href="tel:+201029970033" class="emergency-phone">
+            <span class="emergency-icon">🚨</span>
+            +20 102 997 0033
+          </a>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>{{ 'contact.sidebar.demo.title' | transloco }}</h3>
+          <p>{{ 'contact.sidebar.demo.description' | transloco }}</p>
+          <button class="btn btn-secondary" (click)="requestDemo()">
+            {{ 'contact.sidebar.demo.button' | transloco }}
+          </button>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>{{ 'contact.sidebar.support.title' | transloco }}</h3>
+          <p>{{ 'contact.sidebar.support.description' | transloco }}</p>
+          <div class="support-links">
+            <a href="mailto:support@klixa.com" class="support-link">
+              <span class="link-icon">💬</span>
+              {{ 'contact.sidebar.support.email' | transloco }}
+            </a>
+            <a href="tel:+201029970032" class="support-link">
+              <span class="link-icon">📞</span>
+              {{ 'contact.sidebar.support.phone' | transloco }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Locations Section -->
+  <section class="locations-section">
+    <div class="container">
+      <h2>{{ 'contact.locations.title' | transloco }}</h2>
+      <p class="section-intro">{{ 'contact.locations.description' | transloco }}</p>
+
+      <div class="locations-grid">
+        <div class="location-card">
+          <div class="location-header">
+            <h3>{{ 'contact.locations.cairo.title' | transloco }}</h3>
+            <span class="location-badge primary">{{ 'contact.locations.headquarters' | transloco }}</span>
+          </div>
+          <div class="location-info">
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <span>{{ 'contact.locations.cairo.address' | transloco }}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📞</span>
+              <span>+20 2 1234 5678</span>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🕒</span>
+              <span>{{ 'contact.locations.cairo.hours' | transloco }}</span>
+            </div>
+          </div>
+          <button class="btn btn-outline" (click)="openMap('cairo')">
+            {{ 'contact.locations.viewMap' | transloco }}
+          </button>
+        </div>
+
+        <div class="location-card">
+          <div class="location-header">
+            <h3>{{ 'contact.locations.riyadh.title' | transloco }}</h3>
+            <span class="location-badge">{{ 'contact.locations.regional' | transloco }}</span>
+          </div>
+          <div class="location-info">
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <span>{{ 'contact.locations.riyadh.address' | transloco }}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📞</span>
+              <span>+966 11 123 4567</span>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🕒</span>
+              <span>{{ 'contact.locations.riyadh.hours' | transloco }}</span>
+            </div>
+          </div>
+          <button class="btn btn-outline" (click)="openMap('riyadh')">
+            {{ 'contact.locations.viewMap' | transloco }}
+          </button>
+        </div>
+
+        <!-- <div class="location-card">
+          <div class="location-header">
+            <h3>{{ 'contact.locations.dubai.title' | transloco }}</h3>
+            <span class="location-badge">{{ 'contact.locations.regional' | transloco }}</span>
+          </div>
+          <div class="location-info">
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <span>{{ 'contact.locations.dubai.address' | transloco }}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📞</span>
+              <span>+971 4 123 4567</span>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🕒</span>
+              <span>{{ 'contact.locations.dubai.hours' | transloco }}</span>
+            </div>
+          </div>
+          <button class="btn btn-outline" (click)="openMap('dubai')">
+            {{ 'contact.locations.viewMap' | transloco }}
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>{{ 'contact.faq.title' | transloco }}</h2>
+      <p class="section-intro">{{ 'contact.faq.description' | transloco }}</p>
+
+      <div class="faq-grid">
+        <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+          <div class="faq-question" (click)="toggleFaq(i)">
+            <h4>{{ faq.question | transloco }}</h4>
+            <span class="faq-toggle">{{ faq.open ? '−' : '+' }}</span>
+          </div>
+          <div class="faq-answer" [class.open]="faq.open">
+            <p>{{ faq.answer | transloco }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>{{ 'contact.cta.title' | transloco }}</h2>
+        <p>{{ 'contact.cta.description' | transloco }}</p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary" (click)="scrollToForm()">
+            {{ 'contact.cta.contactUs' | transloco }}
+          </button>
+          <button class="btn btn-secondary" (click)="requestDemo()">
+            {{ 'contact.cta.requestDemo' | transloco }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-landing-footer></app-landing-footer>
+
+</div>

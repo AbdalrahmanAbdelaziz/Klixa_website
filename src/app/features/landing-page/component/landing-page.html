@@ -1,0 +1,58 @@
+<div class="services-page">
+  <!-- Header -->
+<app-landing-header></app-landing-header>
+
+  <!-- Hero Carousel Section -->
+  <section class="hero">
+    <div class="carousel-container">
+      <div class="carousel">
+        <div 
+          class="carousel-slide" 
+          *ngFor="let slide of carouselSlides; let i = index"
+          [class.active]="i === currentSlide"
+          [style.background-image]="'url(' + slide.image + ')'">
+          
+          <div class="carousel-overlay"></div>
+          <div class="carousel-content">
+            <h2>{{ slide.title | transloco }}</h2>
+            <p>{{ slide.description | transloco }}</p>
+
+            <div class="cta-buttons">
+              <button class="btn btn-primary" (click)="navigateToLoginPage()">
+                {{ 'landing.buttons.login' | transloco }}
+              </button>
+
+              <button class="btn btn-secondary" (click)="navigateToInfo()">
+                {{ 'landing.buttons.learnMore' | transloco }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control prev" (click)="prevSlide()">
+  <i class="fa-solid fa-chevron-left"></i>
+</button>
+
+<button class="carousel-control next" (click)="nextSlide()">
+  <i class="fa-solid fa-chevron-right"></i>
+</button>
+
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button 
+          *ngFor="let slide of carouselSlides; let i = index"
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)">
+        </button>
+      </div>
+    </div>
+  </section>
+
+ 
+ 
+
+ 
+ 
+</div>

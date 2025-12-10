@@ -1,0 +1,76 @@
+<div class="services-page">
+  <!-- Header -->
+    <app-landing-header></app-landing-header>
+
+  <!-- Hero Section -->
+  <section class="services-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>{{ 'services.hero.title' | transloco }}</h1>
+        <p class="hero-description">{{ 'services.hero.description' | transloco }}</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>+30</h3>
+            <p>{{ 'services.hero.yearsExperience' | transloco }}</p>
+          </div>
+          <div class="stat">
+            <h3>99.8%</h3>
+            <p>{{ 'services.hero.accuracy' | transloco }}</p>
+          </div>
+          <div class="stat">
+            <h3>24/7</h3>
+            <p>{{ 'services.hero.support' | transloco }}</p>
+          </div>
+          <div class="stat">
+            <h3>2.4M</h3>
+            <p>{{ 'services.hero.processedClaims' | transloco }}</p>
+          </div>
+          <div class="stat">
+            <h3>94%</h3>
+            <p>{{ 'services.hero.collectionRate' | transloco }}</p>
+          </div>
+        </div>
+        <button class="btn btn-primary" routerLink="/login">
+          {{ 'services.hero.cta' | transloco }}
+        </button>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- How to Get Started -->
+  <section class="get-started">
+    <div class="container">
+      <h2>{{ 'services.getStarted.title' | transloco }}</h2>
+      <p class="section-intro">{{ 'services.getStarted.description' | transloco }}</p>
+
+      <div class="steps-grid">
+        <div class="step" *ngFor="let stepIndex of [0,1,2,3,4]">
+          <div class="step-number">{{ stepIndex + 1 }}</div>
+          <h4>{{ 'services.getStarted.steps.' + stepIndex + '.title' | transloco }}</h4>
+          <p>{{ 'services.getStarted.steps.' + stepIndex + '.description' | transloco }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section class="cta-section">
+    <div class="container">
+      <h2>{{ 'services.cta.title' | transloco }}</h2>
+      <p>{{ 'services.cta.description' | transloco }}</p>
+
+      <div class="cta-buttons">
+        <button class="btn btn-primary" (click)="scrollToContact()">
+          {{ 'services.cta.contactUs' | transloco }}
+        </button>
+        <button class="btn btn-secondary" (click)="requestDemo()">
+          {{ 'services.cta.requestDemo' | transloco }}
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+<app-landing-footer></app-landing-footer>
+
+ 

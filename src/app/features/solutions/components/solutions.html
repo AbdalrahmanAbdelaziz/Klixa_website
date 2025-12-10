@@ -1,0 +1,24 @@
+<app-landing-header></app-landing-header>
+
+<section class="why-choose">
+  <div class="container">
+    <h2>
+      {{ 'services.whyChoose.part1' | transloco }}
+      <img src="klixx.png" alt="Klixa" class="company-logo">
+      <!-- {{ 'services.whyChoose.part2' | transloco }} -->
+    </h2>
+    <p class="section-intro">{{ 'services.whyChoose.description' | transloco }}</p>
+    
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of [0,1,2,3,4,5,6]">
+        <div class="feature-icon">
+          {{ ['🏆','🔧','🌍','⚡','🛡️','📈','🏛️'][feature] }}
+        </div>
+        <h3>{{ 'services.whyChoose.features.' + feature + '.title' | transloco }}</h3>
+        <p>{{ 'services.whyChoose.features.' + feature + '.description' | transloco }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-landing-footer></app-landing-footer>

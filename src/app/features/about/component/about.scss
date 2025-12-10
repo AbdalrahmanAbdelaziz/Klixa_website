@@ -1,0 +1,373 @@
+// Variables
+$primary-color: #2563eb;
+$secondary-color: #F8BF28;
+$dark-color: #1e293b;
+$light-color: #f8fafc;
+$text-color: #334155;
+$white: #ffffff;
+$shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+$header-height: 80px;
+$border-radius: 12px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Global Styles
+.services-page {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+// RTL Support
+[dir="rtl"] {
+  .header {
+    .container {
+      .logo {
+        order: 3;
+      }
+
+      .nav {
+        order: 2;
+        margin-left: 0;
+        margin-right: auto;
+        
+        a {
+          margin-right: 0;
+          margin-left: 2rem;
+        }
+      }
+
+      .header-actions {
+        order: 1;
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .features-grid,
+  .services-grid,
+  .steps-grid,
+  .footer-content,
+  .hero-stats {
+    direction: rtl;
+  }
+
+  .service-features,
+  .step,
+  .feature-card,
+  .service-card {
+    text-align: right;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.btn {
+  padding: 14px 32px;
+  border: none;
+  border-radius: $border-radius;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $transition;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow;
+  }
+
+  &.btn-primary {
+    background: linear-gradient(135deg, $primary-color, #1d4ed8);
+    color: $white;
+
+    &:hover {
+      background: linear-gradient(135deg, #1d4ed8, $primary-color);
+    }
+  }
+
+  &.btn-secondary {
+    background: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+}
+
+
+// Hero Section
+.services-hero {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: $white;
+  padding: 120px 0 80px;
+  margin-top: $header-height;
+
+  .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-description {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    .stat {
+      text-align: center;
+
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+
+// Get Started Section
+.get-started {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, $light-color, $white);
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: $dark-color;
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $text-color;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .step {
+    text-align: center;
+    padding: 2rem;
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: $primary-color;
+      color: $white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto 1.5rem;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: $dark-color;
+    }
+
+    p {
+      color: $text-color;
+      line-height: 1.6;
+    }
+  }
+}
+
+.cta-section {
+  padding: 6rem 0;
+  text-align: center;
+   background: linear-gradient(135deg, $primary-color, $secondary-color);
+     margin-right: -.5rem;
+  margin-left: -1rem;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: $light-color;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: $light-color;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .btn-secondary {
+      color: $primary-color;
+      border-color: $primary-color;
+
+      &:hover {
+        background: $primary-color;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+// Responsive Design
+@media (max-width: 768px) {
+  .header {
+    .container {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 1rem;
+    }
+
+    .logo {
+      order: 1;
+    }
+
+    .nav {
+      order: 3;
+      width: 100%;
+      margin-top: 1rem;
+      justify-content: center;
+      display: none;
+    }
+
+    .header-actions {
+      order: 2;
+      margin-left: auto;
+    }
+  }
+
+  [dir="rtl"] .header {
+    .container {
+      .logo {
+        order: 1;
+      }
+
+      .nav {
+        order: 3;
+        margin-right: 0;
+      }
+
+      .header-actions {
+        order: 2;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .services-hero {
+    .hero-content {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+      }
+    }
+
+    .hero-stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      .stat h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .why-choose h2,
+  .our-services h2,
+  .get-started h2,
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+
+    .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-card,
+.service-card,
+.step {
+  animation: fadeIn 0.6s ease-out;
+}

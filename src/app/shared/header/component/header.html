@@ -1,0 +1,145 @@
+<div class="navbar" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="navbar-content">
+
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="klixx.png" alt="Logo" class="logo-image" routerLink="/" />
+    </div>
+
+    <!-- Nav Links (Desktop) -->
+    <ul class="nav-links" *ngIf="!isMobileView">
+
+      <!-- Guest -->
+      <!-- <ng-container *ngIf="role === 'guest'">
+        <li>
+          <a routerLink="/login" routerLinkActive="active">
+            <i class="fas fa-sign-in-alt"></i>
+            <span>Login</span>
+          </a>
+        </li>
+      </ng-container> -->
+
+      <!-- Admin -->
+      <ng-container *ngIf="role === 'admin'">
+        <li>
+          <a routerLink="/dashboard" routerLinkActive="active">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/users" routerLinkActive="active">
+            <i class="fas fa-users"></i>
+            <span>Manage Users</span>
+          </a>
+        </li>
+      </ng-container>
+
+      <!-- Doctor -->
+      <ng-container *ngIf="role === 'doctor'">
+        <li>
+          <a routerLink="/appointments" routerLinkActive="active">
+            <i class="fas fa-calendar-check"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/patients" routerLinkActive="active">
+            <i class="fas fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+        </li>
+      </ng-container>
+
+    </ul>
+
+    <!-- Right Section -->
+    <div class="right-section" *ngIf="!isMobileView">
+
+      <!-- Only show profile if not guest -->
+      <ng-container *ngIf="role !== 'guest'">
+
+        <!-- Profile Menu -->
+        <div class="profile-menu-container">
+          <a (click)="toggleProfileMenu()">
+            <img
+              class="avatar"
+              [src]="profilePic"
+              alt="User"
+            />
+            <span>{{ userName }}</span>
+            <i class="fas fa-chevron-down dropdown-icon" [class.rotate]="isProfileMenuOpen"></i>
+          </a>
+
+          <!-- Dropdown -->
+          <div class="profile-menu" [class.open]="isProfileMenuOpen">
+            <a routerLink="/profile">
+              <i class="fas fa-user-cog"></i> Profile
+            </a>
+
+            <a (click)="logout()">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </div>
+
+      </ng-container>
+
+      <!-- Language Switcher -->
+      <button class="lang-switcher" (click)="toggleLanguage()">
+        {{ currentLang === 'en' ? 'عربي' : 'EN' }}
+      </button>
+    </div>
+
+    <!-- Mobile Version -->
+    <div class="mobile-nav" *ngIf="isMobileView">
+      <div class="top-nav-items">
+        <button class="lang-switcher" (click)="toggleLanguage()">
+          {{ currentLang === 'en' ? 'عربي' : 'EN' }}
+        </button>
+
+        <button class="hamburger" (click)="toggleMenu()">
+          <i class="fas" [class.fa-times]="isMenuOpen" [class.fa-bars]="!isMenuOpen"></i>
+        </button>
+      </div>
+
+      <div class="mobile-menu" [class.open]="isMenuOpen">
+
+        <!-- Guest -->
+        <ng-container *ngIf="role === 'guest'">
+          <a routerLink="/login" (click)="closeAllMenus()">
+            <i class="fas fa-sign-in-alt"></i> Login
+          </a>
+        </ng-container>
+
+        <!-- Admin -->
+        <ng-container *ngIf="role === 'admin'">
+          <a routerLink="/dashboard" (click)="closeAllMenus()">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+          </a>
+          <a routerLink="/users" (click)="closeAllMenus()">
+            <i class="fas fa-users"></i> Manage Users
+          </a>
+          <a (click)="logout()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </ng-container>
+
+        <!-- Doctor -->
+        <ng-container *ngIf="role === 'doctor'">
+          <a routerLink="/appointments" (click)="closeAllMenus()">
+            <i class="fas fa-calendar-check"></i> Appointments
+          </a>
+          <a routerLink="/patients" (click)="closeAllMenus()">
+            <i class="fas fa-user-injured"></i> Patients
+          </a>
+          <a (click)="logout()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </ng-container>
+
+      </div>
+    </div>
+
+  </div>
+</div>

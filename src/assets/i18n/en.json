@@ -1,0 +1,398 @@
+{
+  "landing": {
+    "header": {
+      "solutions": "Solutions",
+      "features": "Features",
+      "contact": "Contact",
+      "about": "About",
+      "staffLogin": "Staff Login"
+    },
+   "carousel": {
+  "0": {
+    "title": "Healthcare Driven By AI",
+    "description": "Smart • Fast • Secure — A new generation HIS for modern healthcare."
+  },
+  "1": {
+    "title": "Advanced Patient Care Management",
+    "description": "Streamline patient care with our comprehensive healthcare solutions."
+  },
+  "2": {
+    "title": "Smart Medical Records System",
+    "description": "Digital health records accessible anytime, anywhere."
+  },
+  "3": {
+    "title": "Real-time Analytics & Reporting",
+    "description": "Make data-driven decisions with advanced analytics."
+  }
+}
+,
+    "buttons": {
+      "login": "Login",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "title": "Comprehensive Healthcare Solutions",
+      "patient": {
+        "title": "Patient Management",
+        "desc": "Complete patient journey from registration to discharge with automated workflows."
+      },
+      "pharmacy": {
+        "title": "Pharmacy System",
+        "desc": "Manage inventory, prescriptions, and drug interactions seamlessly."
+      },
+      "analytics": {
+        "title": "Analytics Dashboard",
+        "desc": "Real-time insights and reports for better decision making."
+      },
+      "security": {
+        "title": "HIPAA Compliant",
+        "desc": "Ensured data security and privacy with industry-standard compliance."
+      }
+    },
+    "stats": {
+      "facilities": "Healthcare Facilities",
+      "patients": "Patients Served",
+      "uptime": "Uptime Guarantee",
+      "support": "Support Available"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Healthcare Facility?",
+      "desc": "Join thousands of healthcare providers using our advanced HIS platform.",
+      "getStarted": "Get Started Today",
+      "explore": "Explore"
+    },
+    "footer": {
+      "desc": "Transforming healthcare through innovative technology solutions.",
+      "quickLinks": "Quick Links",
+      "contact": "Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "rights": "All rights reserved."
+    }
+  },
+
+
+  "services": {
+    "header": {
+      "home": "Home",
+      "services": "Our Services",
+      "solutions": "Solutions",
+      "contact": "Contact",
+      "about": "About",
+      "staffLogin": "Staff Login"
+    },
+    "hero": {
+      "title": "Comprehensive Healthcare Solutions for Modern Medical Institutions",
+      "description": "With over 30 years of specialized experience in the healthcare sector, Klixa offers integrated solutions for revenue cycle management, medical coding, and financial operations that enhance healthcare institution performance.",
+      "yearsExperience": "Years of Experience",
+      "accuracy": "Accuracy Rate",
+      "support": "Technical Support",
+      "processedClaims": "Processed Claims",
+      "collectionRate": "Collection Rate",
+      "cta": "Start Your Transformation"
+    },
+    "whyChoose": {
+      "part1": "Why Choose",
+      "part2": "?",
+      "title": "Why Choose Klixa?",
+      "description": "We are not just another healthcare technology company. Klixa represents a strategic partner dedicated to transforming your healthcare institution's operations and financial performance.",
+      "features": {
+       "0": {
+          "title": "Regional Expertise in Healthcare",
+          "description": "30 years of specialized experience working with hospitals, medical companies, and insurance providers across the region, delivering proven results in medical coding, revenue cycle management, and financial transformation."
+        },
+       "1": {
+          "title": "Comprehensive Integrated Solution",
+          "description": "A complete platform that manages patient journeys from admission to final collection, ensuring seamless integration between medical, financial, and administrative departments."
+        },
+       "2": {
+          "title": "Customized for Middle Eastern Market",
+          "description": "Specifically designed solutions that understand and adapt to the unique requirements of private healthcare institutions and government hospitals in the Middle East."
+        },
+       "3": {
+          "title": "Patient-Centric Approach",
+          "description": "Our solutions prioritize patient experience while ensuring accurate medical documentation and efficient revenue collection for healthcare providers."
+        },
+       "4": {
+          "title": "Transparency & Compliance",
+          "description": "Comprehensive documentation and compliance with international standards (ICD-10, CPT) ensuring accuracy in medical coding and billing processes."
+        },
+        "5":{
+          "title": "24/7 Professional Support",
+          "description": "Round-the-clock technical support and professional services to ensure continuous operation and rapid issue resolution for your healthcare institution."
+        },
+       "6": {
+          "title": "International Standards & Certifications",
+          "description": "Our solutions comply with the highest international healthcare standards and are certified by leading global healthcare authorities."
+        }
+      }
+    },
+    "ourServices": {
+      "title": "Our Comprehensive Services",
+      "description": "End-to-end healthcare management solutions designed to optimize performance, enhance revenue, and improve patient care.",
+      "services": {
+        "0":{
+          "title": "RCM & Revenue Management",
+          "description": "Complete revenue cycle management from patient registration to final payment collection, ensuring maximum revenue optimization.",
+          "features": [
+            "Automated financial workflow management",
+            "Streamlined revenue collection processes",
+            "Automated patient eligibility verification",
+            "Real-time financial reporting and analytics",
+            "Comprehensive denial management system"
+          ]
+        },
+       "1": {
+          "title": "Medical Coding & Documentation",
+          "description": "Advanced medical coding solutions compliant with international standards (ICD-10, CPT) ensuring accuracy and compliance.",
+          "features": [
+            "Automated coding workflow management",
+            "Integrated local and international coding standards",
+            "Real-time coding validation and auditing",
+            "Professional coder training and support"
+          ]
+        },
+       "2": {
+          "title": "Financial Analytics & Reporting",
+          "description": "Comprehensive financial analytics and reporting tools providing deep insights into your institution's financial performance.",
+          "features": [
+            "Monthly and annual financial reporting",
+            "Customizable financial dashboards",
+            "Real-time KPIs and performance metrics",
+            "Strategic financial planning tools"
+          ]
+        },
+       "3": {
+          "title": "System Integration & Interoperability",
+          "description": "Seamless integration between different hospital departments and existing systems ensuring data consistency and operational efficiency.",
+          "features": [
+            "API-based system integration",
+            "Automated workflow management",
+            "Electronic medical record integration",
+            "Real-time data synchronization",
+            "Comprehensive interoperability solutions"
+          ]
+        },
+       "4": {
+          "title": "Training & Professional Development",
+          "description": "Comprehensive training programs for healthcare staff covering RCM, medical coding, and financial management best practices.",
+          "features": [
+            "RCM training for healthcare institutions",
+            "Medical coding certification programs",
+            "New technology implementation training",
+            "Patient registration and billing training"
+          ]
+        },
+       "5": {
+          "title": "Audit & Compliance Services",
+          "description": "Comprehensive audit and compliance services ensuring adherence to healthcare regulations and optimal revenue collection.",
+          "features": [
+            "Daily transaction monitoring",
+            "Automated claim validation",
+            "Compliance reporting and analytics",
+            "Departmental performance assessment"
+          ]
+        }
+      }
+    },
+    "getStarted": {
+      "title": "How to Get Started?",
+      "description": "Simple, structured process to transform your healthcare institution's operations",
+      "steps": {
+       "0": {
+          "title": "Needs Assessment",
+          "description": "Comprehensive analysis of your current financial operations, challenges, and requirements to design the optimal solution."
+        },
+      "1":  {
+          "title": "Solution Design",
+          "description": "Customized implementation plan and system configuration tailored to your institution's specific needs and workflows."
+        },
+       "2": {
+          "title": "System Implementation",
+          "description": "Seamless integration of Klixa solutions with your existing systems and comprehensive staff training."
+        },
+       "3": {
+          "title": "Training & Deployment",
+          "description": "Complete training program for all users and phased deployment ensuring smooth transition and adoption."
+        },
+       "4": {
+          "title": "Ongoing Support",
+          "description": "Continuous technical support, system updates, and professional services to ensure optimal performance."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Healthcare Institution?",
+      "description": "Join hundreds of healthcare providers across the Middle East who trust Klixa for their revenue cycle management and operational excellence.",
+      "contactUs": "Contact Us Now",
+      "requestDemo": "Request a Demo"
+    },
+    "footer": {
+      "desc": "Leading healthcare technology solutions provider with 30+ years of regional expertise.",
+      "quickLinks": "Quick Links",
+      "contact": "Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "rights": "All rights reserved"
+    }
+  },
+
+   "contact": {
+    "header": {
+      "home": "Home",
+      "services": "Our Services",
+      "solutions": "Solutions",
+      "contact": "Contact",
+      "about": "About",
+      "staffLogin": "Staff Login"
+    },
+    "hero": {
+      "title": "Get in Touch with ",
+      "description": "Ready to transform your healthcare institution? Our team of experts is here to help you implement the perfect solution for your needs.",
+      "responseTime": "2-Hour Response",
+      "responseDetail": "Guaranteed response time for urgent inquiries",
+      "coverage": "Regional Coverage",
+      "coverageDetail": "Serving healthcare institutions across MENA",
+      "support": "24/7 Support",
+      "supportDetail": "Round-the-clock technical assistance"
+    },
+    "methods": {
+      "title": "Multiple Ways to Reach Us",
+      "description": "Choose the communication method that works best for you. Our team is always ready to assist.",
+      "phone": {
+        "title": "Phone Support",
+        "description": "Speak directly with our healthcare solutions specialists",
+        "sales": "Sales & Inquiries",
+        "support": "Technical Support",
+        "emergency": "Emergency Support"
+      },
+      "email": {
+        "title": "Email Communication",
+        "description": "Send us detailed inquiries and receive comprehensive responses",
+        "general": "General Inquiries",
+        "sales": "Sales Team",
+        "support": "Support Team"
+      },
+      "liveChat": {
+        "title": "Live Chat",
+        "description": "Instant messaging with our support team during business hours",
+        "button": "Start Live Chat",
+        "availability": "Available Now"
+      },
+      "office": {
+        "title": "Office Visit",
+        "description": "Schedule an in-person meeting at our regional offices",
+        "hours": "Business Hours",
+        "days": "Working Days",
+        "daysDetail": "Sunday - Thursday"
+      }
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "description": "Fill out the form below and our team will get back to you within 24 hours.",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company/Institution",
+      "inquiryType": "Type of Inquiry",
+      "message": "Your Message",
+      "newsletter": "Subscribe to our newsletter for updates and insights",
+      "selectOption": "Please select an option",
+      "inquiryTypes": {
+        "sales": "Sales Inquiry",
+        "support": "Technical Support",
+        "partnership": "Partnership Opportunity",
+        "career": "Career Opportunities",
+        "other": "Other"
+      },
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "errors": {
+        "required": "This field is required",
+        "email": "Please enter a valid email address"
+      }
+    },
+    "sidebar": {
+      "emergency": {
+        "title": "Emergency Support",
+        "description": "Critical system issues requiring immediate attention"
+      },
+      "demo": {
+        "title": "Request a Demo",
+        "description": "See our solutions in action with a personalized demonstration",
+        "button": "Schedule Demo"
+      },
+      "support": {
+        "title": "Technical Support",
+        "description": "Get help with existing systems and implementations",
+        "email": "Email Support",
+        "phone": "Phone Support"
+      }
+    },
+    "locations": {
+      "title": "Our Regional Offices",
+      "description": "With offices across the Middle East, we're always close to our clients.",
+      "headquarters": "Headquarters",
+      "regional": "Regional Office",
+      "viewMap": "View on Map",
+      "cairo": {
+        "title": "Cairo Office",
+        "address": "7 Al Shahid Mohammed Al Shaabani, New Cairo, Cairo, Egypt",
+        "hours": "8:00 AM - 6:00 PM (GMT+2)"
+      },
+      "riyadh": {
+        "title": "Riyadh Office",
+        "address": "456 Medical Center, Olaya District, Riyadh, Saudi Arabia",
+        "hours": "9:00 AM - 5:00 PM (GMT+3)"
+      },
+      "dubai": {
+        "title": "Dubai Office",
+        "address": "789 Healthcare Tower, Dubai Healthcare City, UAE",
+        "hours": "8:00 AM - 5:00 PM (GMT+4)"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Quick answers to common questions about our services and support.",
+      "questions": {
+       "0": {
+          "question": "What is your typical response time for support requests?",
+          "answer": "We guarantee a 2-hour response time for emergency support requests and within 24 hours for standard inquiries. Our dedicated support team is available 24/7 for critical system issues."
+        },
+        "1":{
+          "question": "Do you provide training for our staff?",
+          "answer": "Yes, we provide comprehensive training programs for all levels of staff, including administrators, medical coders, and financial teams. Training can be conducted on-site or remotely based on your preference."
+        },
+       "2": {
+          "question": "Can Klixa integrate with our existing hospital systems?",
+          "answer": "Absolutely. Our solutions are designed with interoperability in mind and can integrate with most existing hospital management systems, EMRs, and financial software through our robust API framework."
+        },
+       "3": {
+          "question": "What regions do you currently serve?",
+          "answer": "We serve healthcare institutions across the Middle East and North Africa region, with offices in Egypt, Saudi Arabia, and UAE. We also provide remote support for institutions in other regions."
+        },
+        "4":{
+          "question": "How long does implementation typically take?",
+          "answer": "Implementation timelines vary based on the size of your institution and the complexity of requirements. Typical implementations range from 4-12 weeks, including configuration, integration, and staff training."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Join hundreds of healthcare institutions across the region that trust Klixa for their digital transformation.",
+      "contactUs": "Contact Us Now",
+      "requestDemo": "Request a Demo"
+    },
+    "footer": {
+      "desc": "Leading healthcare technology solutions with 30+ years of regional expertise.",
+      "quickLinks": "Quick Links",
+      "contact": "Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "7 Al Shahid Mohammed Al Shaabani, New Cairo, Egypt",
+      "rights": "All rights reserved"
+    }
+  }
+  
+}

@@ -1,0 +1,25 @@
+<div class="services-page">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="klixx.png" alt="MediCare HIS" class="logo-image">
+      </div>
+
+      <nav class="nav">
+        <a routerLink="/">{{ 'services.header.home' | transloco }}</a>
+        <a routerLink="/services">{{ 'services.header.services' | transloco }}</a>
+        <a routerLink="/solutions">{{ 'services.header.solutions' | transloco }}</a>
+        <a routerLink="/contact">{{ 'services.header.contact' | transloco }}</a>
+        <a routerLink="/about">{{ 'services.header.about' | transloco }}</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-switcher" (click)="toggleLanguage()">
+          {{ currentLang === 'en' ? 'عربي' : 'EN' }}
+        </button>
+        <!-- <button class="login-btn" routerLink="/login">{{ 'landing.header.staffLogin' | transloco }}</button> -->
+      </div>
+    </div>
+  </header>
+</div>
